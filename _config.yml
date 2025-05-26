@@ -13,7 +13,7 @@ title                    : "HOME"
 title_separator          : "-"
 name                     : &name "Ziming Liu"
 description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : https://liu12732.github.io/Ziming # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
 
@@ -27,7 +27,7 @@ author:
   pronouns         : # example: "she/her"  
   location         : "Jinan, Shandong"
   employer         : "Shandong University"
-  uri              : https://liu12732.github.io/Ziming/
+  uri              : #https://liu12732.github.io/Ziming/
   email            : "liu.12732@buckeyemail.osu.edu" 
 
   # Academic websites
