@@ -22,7 +22,7 @@ repository               : "https://liu12732.github.io/Ziming"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "ZimingPhoto.jpg"
+  avatar           : "ZimingPhoto.png"
   name             : "Ziming Liu / 刘子铭"
   pronouns         : "he/his"  
   location         : "Jinan, Shandong"
