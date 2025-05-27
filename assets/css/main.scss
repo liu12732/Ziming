@@ -1,67 +1,44 @@
----
----
+.publications-list {
+  counter-reset: pub-counter;
+  padding-left: 0;
+}
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
+.pub-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2.5em;
 
-@import
-    "vendor/breakpoint/breakpoint",
-
-    "themes",
-    "theme/default",
-    "theme/dark",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands",
-    "vendor/magnific-popup/magnific-popup"
-;
-
-.publication-item {
-  margin-bottom: 1.5em;
-  
-  .publication-title {
+  .pub-number {
+    position: absolute;
+    left: 0;
     font-weight: 600;
-    color: #2a6496;
-    
+    color: #2a5db0;
+    min-width: 2em;
+    text-align: right;
+  }
+
+  .pub-content {
+    flex-grow: 1;
+  }
+
+  .pub-title {
+    color: #2a5db0;
+    text-decoration: none;
+    font-weight: 500;
+
     &:hover {
       text-decoration: underline;
     }
   }
-  
-  .publication-authors {
-    color: #666;
-    font-size: 0.95em;
-  }
-  
-  .publication-venue {
+
+  .pub-journal {
     color: #228B22;
     font-style: italic;
-    font-size: 0.9em;
+  }
+
+  .pub-preprint {
+    color: #d95a00;
+    font-weight: 500;
   }
 }
