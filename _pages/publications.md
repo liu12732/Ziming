@@ -6,12 +6,12 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">Full list available on <a href="{{site.author.googlescholar}}">Google Scholar</a>.</div>
+  <p>Complete list on <a href="{{ site.author.googlescholar }}">Google Scholar</a></p>
 {% endif %}
 
 {% include base_path %}
 
-<div class="publications-list">
+<div class="publications-container">
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
