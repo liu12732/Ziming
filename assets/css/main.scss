@@ -42,47 +42,49 @@
     "vendor/magnific-popup/magnific-popup"
 ;
 
-.publications-list {
-  counter-reset: pub-counter;
-  padding-left: 0;
-}
+.publication-list.reversed {
+  list-style: none;
+  counter-reset: pub-counter calc({{ site.publications.size }} + 1);
+  padding-left: 1.5em;
+  
+  .publication-item {
+    counter-increment: pub-counter -1;
+    margin-bottom: 1.2rem;
+    position: relative;
+    line-height: 1.5;
 
-.pub-item {
-  display: flex;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-left: 2.5em;
-
-  .pub-number {
-    position: absolute;
-    left: 0;
-    font-weight: 600;
-    color: #2a5db0;
-    min-width: 2em;
-    text-align: right;
-  }
-
-  .pub-content {
-    flex-grow: 1;
-  }
-
-  .pub-title {
-    color: #2a5db0;
-    text-decoration: none;
-    font-weight: 500;
-
-    &:hover {
-      text-decoration: underline;
+    &::before {
+      content: counter(pub-counter) ". ";
+      position: absolute;
+      left: -1.5em;
+      font-weight: 600;
+      color: #2a5db0;
     }
-  }
 
-  .pub-journal {
-    color: #228B22;
-    font-style: italic;
-  }
+    .pub-meta {
+      color: #666;
+      font-size: 0.95em;
+      margin-right: 0.3em;
+    }
 
-  .pub-preprint {
-    color: #d95a00;
-    font-weight: 500;
+    .pub-title {
+      color: #2a5db0;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .pub-journal {
+      color: #228B22;
+      font-style: italic;
+    }
+
+    .pub-preprint {
+      color: #d95a00;
+      font-weight: 500;
+    }
   }
 }
