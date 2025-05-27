@@ -1,0 +1,22 @@
+<li class="talk-item">
+  <div class="talk-header">
+    <span class="talk-bullet">·</span>
+    <span class="talk-title">
+      <a href="{{ post.link }}" class="post-link">{{ post.title }}</a>
+      {% if post.pdf %}
+        <a href="{{ post.pdf | relative_url }}" class="pdf-link">
+          <em>(pdf{% if post.file_size %}, {{ post.file_size }}{% endif %})</em>
+        </a>
+      {% elsif post.ppt %}
+        <a href="{{ post.ppt | relative_url }}" class="ppt-link">
+          <em>(ppt{% if post.file_size %}, {{ post.file_size }}{% endif %})</em>
+        </a>
+      {% endif %}
+    </span>
+  </div>
+  <div class="talk-meta">
+    {% if post.venue %}{{ post.venue }}{% endif %}
+    {% if post.location %}, {{ post.location }}{% endif %}
+    <span class="talk-year">{{ post.date | date: "%Y" }}</span>
+  </div>
+</li>
