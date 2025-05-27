@@ -5,27 +5,23 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% assign pub_count = site.publications | size %}
-{% assign reversed_pubs = site.publications | reverse %}
+{% assign sorted_pubs = site.publications | sort: 'date' | reverse %}
 
-{% if site.author.googlescholar %}
-  <p>Complete list on <a href="{{ site.author.googlescholar }}">Google Scholar</a></p>
-{% endif %}
-
-<div class="publications-list">
-  {% for post in reversed_pubs %}
-    <div class="pub-item">
-      <span class="pub-number">{{ pub_count | minus: forloop.index0 }}.</span>
-      <div class="pub-content">
-        <a href="{{ post.link }}" class="pub-title">
-          {{ post.authors }} {{ post.title }}
-        </a>
-        {% if post.journal %}
-          <span class="pub-journal">, {{ post.journal }}</span>
-        {% else %}
-          <span class="pub-preprint"> (Preprint)</span>
+<ol class="publication-list reversed">
+  {% for pub in sorted_pubs %}
+    {% assign index = sorted_pubs.size | minus: forloop.index0 %}
+    <li class="publication-item">
+      <span class="pub-meta">
+        {% if pub.collaborators %}
+          (with {{ pub.collaborators }})
         {% endif %}
-      </div>
-    </div>
+      </span>
+      <a href="{{ pub.link }}" class="pub-title">{{ pub.title }}</a>
+      {% if pub.journal %}
+        <span class="pub-journal">, {{ pub.journal }}</span>
+      {% else %}
+        <span class="pub-preprint"> (Preprint)</span>
+      {% endif %}
+    </li>
   {% endfor %}
-</div>
+</ol>
