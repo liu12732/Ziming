@@ -1,11 +1,6 @@
 ---
 title: "The strong hull property for affine irreducible Coxeter groups of rank 3"
-collection: publications
-permalink: /publication/2025-05-The_strong_hull_property_for_affine_irreducible_Coxeter_groups_of_rank_3
-excerpt:
-date: 2025-05-20
-venue:
-slidesurl:
-paperurl: 'https://arxiv.org/pdf/2505.15871'
-citation:
+authors: "Ziming Liu"
+link: https://arxiv.org/abs/2505.15871
+venue_type: preprint
 ---
