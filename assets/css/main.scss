@@ -41,3 +41,27 @@
     "vendor/font-awesome/brands",
     "vendor/magnific-popup/magnific-popup"
 ;
+
+.publication-item {
+  margin-bottom: 1.5em;
+  
+  .publication-title {
+    font-weight: 600;
+    color: #2a6496;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .publication-authors {
+    color: #666;
+    font-size: 0.95em;
+  }
+  
+  .publication-venue {
+    color: #228B22;
+    font-style: italic;
+    font-size: 0.9em;
+  }
+}
