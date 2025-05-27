@@ -88,3 +88,15 @@
     }
   }
 }
+
+.page__footer {
+  padding: 2em 0;
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  
+  &-copyright {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
