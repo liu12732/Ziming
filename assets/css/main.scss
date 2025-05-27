@@ -92,3 +92,46 @@
 footer {
   display: none !important;
 }
+
+/* Talks专用样式 */
+.talk-item {
+  list-style: none;
+  margin-bottom: 1.5rem;
+
+  .talk-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .talk-header {
+    display: flex;
+    align-items: baseline;
+    line-height: 1.4;
+  }
+
+  .talk-bullet {
+    color: #2a5db0;
+    font-weight: 700;
+    margin-right: 0.5em;
+  }
+
+  .talk-title {
+    a.pdf-link, a.ppt-link {
+      em {
+        font-style: italic;
+        color: #d95a00;
+        font-size: 0.9em;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .talk-meta {
+    color: #666;
+    font-size: 0.95em;
+    margin-left: 1.8em;
+  }
+}
